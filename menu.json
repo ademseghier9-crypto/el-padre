@@ -1,0 +1,279 @@
+{
+  "restaurant": {
+    "name": "El Padré",
+    "phone": "0782914617",
+    "phoneDisplay": "0782 914 617",
+    "phoneIntl": "+213782914617",
+    "hours": "24/24 - 7/7",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=El%20Padr%C3%A9%20Fast-Food%20Alg%C3%A9rie"
+  },
+  "categories": [
+    {
+      "id": "burgers",
+      "name": "البرغر",
+      "emoji": "🍔",
+      "items": [
+        {
+          "id": "b-pequeno",
+          "name": "El Pequeño",
+          "desc": "قطعة لحم مفروم صغيرة - خس - طماطم - شريحة غرويير - صلصة أمريكية",
+          "price": 280,
+          "image": "images/b-pequeno.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "b-classico",
+          "name": "El Classico",
+          "desc": "لحم مفروم - خس - طماطم - غرويير - مخلل - صلصة أمريكية",
+          "price": 450,
+          "image": "images/b-classico.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "b-pollo",
+          "name": "El Pollo",
+          "desc": "تندرز دجاج - خس - طماطم - غرويير - صلصة الثوم",
+          "price": 450,
+          "image": "images/b-pollo.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "b-cebolla",
+          "name": "La Cebolla",
+          "desc": "لحم مفروم - خس - طماطم - صلصة بيغ ماك - غرويير",
+          "price": 500,
+          "image": "images/b-cebolla.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "b-barbacoa",
+          "name": "La Barbacoa",
+          "desc": "لحم مفروم - خس - طماطم كونفي - صلصة باربكيو - غرويير - بصل مكرمل",
+          "price": 500,
+          "image": "images/b-barbacoa.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "b-ajo",
+          "name": "Ajo",
+          "desc": "لحم مفروم - خس - طماطم - غرويير - صلصة الثوم - بيضة",
+          "price": 550,
+          "image": "images/b-ajo.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "b-dulce",
+          "name": "El Dulce",
+          "desc": "لحم مفروم - خس - طماطم - صلصة العسل - كممبير",
+          "price": 550,
+          "image": "images/b-dulce.jpg",
+          "imageKind": "",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "sandwichs",
+      "name": "الساندويتش",
+      "emoji": "🥖",
+      "items": [
+        {
+          "id": "s-pollo",
+          "name": "Pollo",
+          "desc": "باغيت محشو بتندرز الدجاج - خس - طماطم - صلصة الثوم - غرويير",
+          "price": 450,
+          "image": "images/s-pollo.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "s-carne",
+          "name": "Carne",
+          "desc": "باغيت محشو باللحم المفروم - خس - طماطم - سالسا البقدونس - بصل مكرمل - غرويير",
+          "price": 550,
+          "image": "images/s-carne.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "s-marinado",
+          "name": "Marinado",
+          "desc": "باغيت محشو بالدجاج المتبّل بالكريمة الطازجة - خس - طماطم - غرويير",
+          "price": 600,
+          "image": "images/s-marinado.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "s-bosque",
+          "name": "Bosque",
+          "desc": "باغيت محشو بالدجاج والفطر الطازج المقلي بالكريمة - غرويير",
+          "price": 600,
+          "image": "images/s-bosque.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "s-mexicano",
+          "name": "Mexicano",
+          "desc": "باغيت محشو بالدجاج ومربى الفلفل الحار - ذرة - غرويير",
+          "price": 600,
+          "image": "images/s-mexicano.jpg",
+          "imageKind": "",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "tacos",
+      "name": "التاكوس",
+      "emoji": "🌯",
+      "note": "الصلصات المتوفرة:",
+      "chips": [
+        "كلاسيك",
+        "الثوم",
+        "باربكيو",
+        "حارة",
+        "جزائرية",
+        "بيغ ماك"
+      ],
+      "items": [
+        {
+          "id": "t-pollo",
+          "name": "Pollo",
+          "desc": "صلصة جبن - تندرز دجاج - بطاطس مقلية - صلصة حسب الاختيار",
+          "price": 600,
+          "image": "images/t-pollo.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "t-carne",
+          "name": "Carne",
+          "desc": "صلصة جبن - لحم مفروم - بطاطس مقلية - صلصة حسب الاختيار",
+          "price": 650,
+          "image": "images/t-carne.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "t-marinado",
+          "name": "Marinado",
+          "desc": "صلصة جبن - دجاج متبّل - بطاطس مقلية - صلصة حسب الاختيار",
+          "price": 650,
+          "image": null,
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "t-mixado",
+          "name": "Mixado",
+          "desc": "صلصة جبن - لحم مفروم - تندرز دجاج - بطاطس مقلية - صلصة حسب الاختيار",
+          "price": 700,
+          "image": "images/t-mixado.jpg",
+          "imageKind": "",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "salade",
+      "name": "السلطة",
+      "emoji": "🥗",
+      "items": [
+        {
+          "id": "sa-madrina",
+          "name": "La Madrina",
+          "desc": "خس - طماطم كرزية - ذرة - خيار - خبز محمص - تندرز دجاج",
+          "price": 450,
+          "image": "images/sa-madrina.jpg",
+          "imageKind": "",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "المرافقات",
+      "emoji": "🍟",
+      "items": [
+        {
+          "id": "p-frites",
+          "name": "Frites",
+          "desc": "بطاطس مقلية",
+          "price": 150,
+          "image": "images/p-frites.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "p-fromageres",
+          "name": "Frites Fromagères",
+          "desc": "بطاطس مقلية بصلصة الجبن",
+          "price": 250,
+          "image": "images/p-fromageres.jpg",
+          "imageKind": "",
+          "available": true
+        },
+        {
+          "id": "p-tenders",
+          "name": "Tenders - 200 g",
+          "desc": "تندرز دجاج مقرمش 200 غ",
+          "price": 450,
+          "image": "images/p-tenders.jpg",
+          "imageKind": "",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "المشروبات",
+      "emoji": "🥤",
+      "items": [
+        {
+          "id": "d-eau",
+          "name": "ماء معدني",
+          "desc": "",
+          "price": 50,
+          "image": "images/d-eau.jpg",
+          "imageKind": "contain",
+          "available": true
+        },
+        {
+          "id": "d-soda24",
+          "name": "Soda - 24 cl",
+          "desc": "",
+          "price": 100,
+          "image": "images/d-soda24.jpg",
+          "imageKind": "contain",
+          "available": true
+        },
+        {
+          "id": "d-soda33",
+          "name": "Soda - 33 cl",
+          "desc": "",
+          "price": 150,
+          "image": "images/d-soda33.jpg",
+          "imageKind": "contain",
+          "available": true
+        },
+        {
+          "id": "d-jus",
+          "name": "Jus Maison",
+          "desc": "عصير طبيعي",
+          "price": 350,
+          "image": "images/d-jus.jpg",
+          "imageKind": "contain",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

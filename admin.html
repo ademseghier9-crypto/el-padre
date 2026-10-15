@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>لوحة التحكم | El Padré</title>
+<link rel="icon" href="images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+
+<header class="a-head">
+  <div class="wrap a-head-in">
+    <h1>لوحة التحكم</h1>
+    <button class="btn outline small" id="logout" type="button" hidden>تسجيل الخروج</button>
+  </div>
+</header>
+
+<main class="wrap a-main">
+  <!-- تسجيل الدخول -->
+  <section id="login" class="panel">
+    <h2>الدخول</h2>
+    <form id="login-form">
+      <label class="field">كلمة السر
+        <input type="password" id="key" autocomplete="current-password" required>
+      </label>
+      <p class="err" id="login-error" role="alert" hidden></p>
+      <button class="btn cta" type="submit">دخول</button>
+    </form>
+  </section>
+
+  <!-- المحتوى -->
+  <section id="app" hidden>
+    <div class="tabs a-tabs" role="tablist">
+      <button class="tab" role="tab" id="t-orders" aria-selected="true" type="button">الطلبات <span class="count" id="new-count">0</span></button>
+      <button class="tab" role="tab" id="t-menu" aria-selected="false" type="button">الأسعار والتوفر</button>
+    </div>
+
+    <div id="p-orders">
+      <p class="status" id="orders-status" role="status"></p>
+      <ul class="orders" id="orders"></ul>
+    </div>
+
+    <div id="p-menu" hidden>
+      <div id="menu-edit"></div>
+      <p class="err" id="menu-error" role="alert" hidden></p>
+      <p class="status" id="menu-msg" role="status"></p>
+      <button class="btn cta" id="save-menu" type="button">حفظ التغييرات</button>
+    </div>
+  </section>
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
