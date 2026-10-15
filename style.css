@@ -1,0 +1,209 @@
+/* El Padré — التصميم
+   الألوان من شعار المطعم: برتقالي زعفراني + أسود. الخط: Lalezar للعناوين، Tajawal للنص. */
+:root {
+  --saffron: #FBAA4A;
+  --saffron-deep: #F58B1F;
+  --black: #17130F;
+  --paper: #FFFFFF;
+  --ink: #17130F;
+  --sand: #FFF1DC;
+  --burnt: #9A4600;      /* برتقالي غامق للنصوص على الخلفية الفاتحة */
+  --muted: #65594C;
+  --line: #DCC9AE;
+  --chili: #C0301D;
+  --cta-bg: #17130F;
+  --cta-fg: #FFFFFF;
+  --display: 'Lalezar', 'Tajawal', Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17130F;
+    --ink: #FFF4E4;
+    --sand: #271F17;
+    --burnt: #FBAA4A;
+    --muted: #BCAE9B;
+    --line: #42352A;
+    --chili: #FF7A66;
+    --cta-bg: #FBAA4A;
+    --cta-fg: #17130F;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: 'Tajawal', Tahoma, 'Segoe UI', Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  background: var(--paper);
+  color: var(--ink);
+  padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+}
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid var(--burnt); outline-offset: 2px; }
+.hero :focus-visible, .info :focus-visible { outline-color: #fff; }
+.hero :focus-visible { outline-color: var(--black); }
+
+.wrap { width: min(100% - 32px, 960px); margin-inline: auto; }
+
+/* ---------- الأزرار ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 22px; border-radius: 12px;
+  border: 2px solid transparent; font: inherit; font-weight: 700;
+  text-decoration: none; cursor: pointer; text-align: center;
+}
+.btn.dark { background: var(--black); color: #fff; }
+.btn.outline { border-color: var(--black); color: var(--black); background: transparent; }
+.btn.cta { background: var(--cta-bg); color: var(--cta-fg); }
+.btn.cta-light { background: var(--saffron); color: var(--black); margin-top: 6px; }
+.btn.wide { width: 100%; margin-top: 8px; }
+.btn[disabled] { opacity: .6; cursor: progress; }
+
+/* ---------- الواجهة العلوية ---------- */
+.hero { background: var(--saffron); color: var(--black); overflow: hidden; }
+.topline { background: var(--black); color: #fff; font-size: .95rem; }
+.topline .wrap { display: flex; justify-content: space-between; gap: 12px; padding-block: 6px; }
+.topline a { color: #fff; text-decoration: none; font-weight: 700; }
+
+.hero-in {
+  display: grid; grid-template-columns: 1.25fr 1fr; align-items: center;
+  gap: 28px; padding-block: 36px 60px;
+}
+.hero h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(4rem, 15vw, 8rem); line-height: .9; letter-spacing: -.01em;
+}
+.lead { font-size: 1.2rem; font-weight: 500; max-width: 30ch; margin-top: 14px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+.hero-mark { position: relative; justify-self: center; width: min(100%, 250px); }
+.hero-mark img { width: 100%; height: auto; background: #fff; border-radius: 28px; padding: 6px; }
+.sticker {
+  position: absolute; inset-inline-start: -16px; bottom: -22px;
+  display: grid; place-items: center; width: 100px; height: 100px; border-radius: 50%;
+  background: var(--black); color: var(--saffron);
+  font-family: var(--display); font-size: 1.9rem; line-height: 1;
+  transform: rotate(-10deg); border: 3px solid var(--saffron);
+}
+
+/* ---------- القائمة ---------- */
+.menu { padding-block: 40px 20px; }
+h2 { font-family: var(--display); font-weight: 400; font-size: 2.3rem; line-height: 1.2; }
+h3 { font-size: 1.1rem; font-weight: 800; }
+.menu h2 { margin-bottom: 14px; }
+
+.tabs {
+  position: sticky; top: 0; z-index: 20; background: var(--paper);
+  display: flex; gap: 8px; overflow-x: auto; padding: 10px 0;
+  border-bottom: 2px solid var(--ink); scrollbar-width: thin;
+}
+.tab {
+  flex: none; min-height: 42px; padding: 0 16px; border-radius: 10px;
+  border: 2px solid transparent; background: var(--sand); color: var(--ink);
+  font: inherit; font-weight: 700; cursor: pointer;
+}
+.tab[aria-selected="true"] { background: var(--saffron); color: var(--black); border-color: var(--black); }
+
+.tab-note { margin-top: 14px; padding: 10px 14px; border-radius: 10px; background: var(--sand); font-weight: 500; }
+.tab-note b { font-weight: 800; }
+
+.items { list-style: none; padding: 0; margin-top: 6px; }
+.item {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center;
+  padding: 14px 0; border-bottom: 1px dotted var(--line);
+}
+.th { width: 84px; height: 72px; object-fit: cover; border-radius: 12px; background: var(--sand); }
+.th.contain { object-fit: contain; background: #fff; padding: 3px; }
+.th.ph { display: grid; place-items: center; font-size: 1.9rem; }
+.top { display: flex; align-items: baseline; gap: 8px; }
+.name { font-size: 1.12rem; font-weight: 800; }
+.leader { flex: 1; min-width: 10px; border-bottom: 2px dotted var(--line); transform: translateY(-5px); }
+.price { font-weight: 800; color: var(--burnt); white-space: nowrap; }
+.desc { font-size: .93rem; color: var(--muted); margin-top: 2px; }
+
+.ctl { display: flex; align-items: center; gap: 6px; min-width: 64px; justify-content: flex-end; }
+.add {
+  min-height: 44px; padding: 0 16px; border-radius: 12px; border: 2px solid var(--black);
+  background: var(--saffron); color: var(--black); font: inherit; font-weight: 800; cursor: pointer;
+}
+.soldout { font-size: .9rem; font-weight: 700; color: var(--chili); }
+.step { display: inline-flex; align-items: center; gap: 4px; }
+.step button {
+  width: 38px; height: 38px; border-radius: 10px; border: 2px solid var(--ink);
+  background: var(--paper); color: var(--ink); font: inherit; font-size: 1.2rem; font-weight: 800; cursor: pointer; line-height: 1;
+}
+.step output { min-width: 26px; text-align: center; font-weight: 800; }
+
+.status { margin-top: 14px; color: var(--muted); }
+.status.bad { color: var(--chili); font-weight: 700; }
+.fine { font-size: .88rem; color: var(--muted); margin-top: 10px; }
+
+/* ---------- قسم التواصل ---------- */
+.info { background: var(--black); color: #fff; padding-block: 48px; margin-top: 36px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 32px; }
+.info h3 { color: var(--saffron); margin-bottom: 4px; }
+.info p { color: #E9DFD0; }
+.big-phone { display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1.2; color: var(--saffron); text-decoration: none; margin-block: 6px; }
+.foot { background: #0C0907; color: #B8AB99; text-align: center; padding: 18px 0; font-size: .92rem; }
+
+/* ---------- شريط الطلب ---------- */
+.cartbar {
+  position: fixed; inset-inline: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  max-width: 560px; margin-inline: auto; z-index: 30;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  min-height: 58px; padding: 0 18px; border-radius: 16px;
+  background: var(--black); color: #fff; border: 2px solid var(--saffron);
+  font: inherit; font-weight: 800; cursor: pointer; text-decoration: none;
+  box-shadow: 0 10px 30px #0006;
+}
+.count { display: inline-block; min-width: 28px; padding: 0 8px; border-radius: 99px; background: var(--saffron); color: var(--black); text-align: center; margin-inline-start: 6px; }
+
+/* ---------- نافذة الطلب (تذكرة) ---------- */
+dialog {
+  border: 0; padding: 0; border-radius: 22px; width: min(100% - 24px, 520px);
+  max-height: 92dvh; background: var(--paper); color: var(--ink); box-shadow: 0 24px 70px #000a;
+  margin: auto;
+}
+dialog::backdrop { background: #000a; }
+.sheet { padding: 20px; max-height: 92dvh; overflow: auto; }
+.sheet-head { display: flex; justify-content: space-between; align-items: center; }
+.close { width: 40px; height: 40px; border-radius: 10px; border: 2px solid var(--ink); background: transparent; color: var(--ink); font: inherit; font-size: 1.1rem; cursor: pointer; }
+.lines { list-style: none; padding: 0; margin-top: 12px; border-top: 2px dashed var(--line); }
+.line { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.line .ln { flex: 1 1 80px; min-width: 0; font-weight: 700; }
+.line .sub { font-weight: 800; color: var(--burnt); white-space: nowrap; }
+.total { display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 800; padding: 12px 0 4px; }
+
+form { margin-top: 14px; }
+.seg { border: 0; padding: 0; display: flex; gap: 8px; margin-bottom: 12px; }
+.seg legend { font-weight: 700; margin-bottom: 6px; padding: 0; }
+.seg label { flex: 1; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg span { display: flex; align-items: center; justify-content: center; min-height: 46px; border-radius: 12px; border: 2px solid var(--line); font-weight: 700; cursor: pointer; }
+.seg input:checked + span { background: var(--saffron); border-color: var(--black); color: var(--black); }
+.seg input:focus-visible + span { outline: 3px solid var(--burnt); outline-offset: 2px; }
+
+.field { display: block; font-weight: 700; margin-bottom: 12px; }
+.field input, .field textarea {
+  display: block; width: 100%; margin-top: 4px; padding: 10px 12px; font: inherit; font-weight: 400;
+  border: 2px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--ink);
+}
+.field input:focus, .field textarea:focus { border-color: var(--burnt); outline: none; }
+.err { color: var(--chili); font-weight: 700; margin-bottom: 6px; }
+.done { text-align: center; padding: 18px 4px 6px; }
+.done .ok { font-size: 3rem; line-height: 1; }
+.done .no { font-family: var(--display); font-size: 2.2rem; color: var(--burnt); direction: ltr; }
+
+/* ---------- الهاتف ---------- */
+@media (max-width: 640px) {
+  .hero-in { grid-template-columns: 1fr; gap: 34px; padding-block: 28px 56px; }
+  .hero-mark { width: 180px; justify-self: start; }
+  .item { grid-template-columns: auto 1fr; }
+  .item .ctl { grid-column: 1 / -1; justify-content: flex-end; }
+  .th { width: 76px; height: 66px; }
+}

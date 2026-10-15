@@ -1,0 +1,31 @@
+body.admin { padding-bottom: 40px; }
+.a-head { background: var(--saffron); color: var(--black); }
+.a-head-in { display: flex; justify-content: space-between; align-items: center; padding-block: 14px; }
+.a-head h1 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; }
+.a-main { padding-block: 24px 40px; }
+.panel { max-width: 420px; }
+.btn.small { min-height: 38px; padding: 0 14px; }
+
+.a-tabs { position: static; margin-bottom: 14px; }
+.orders { list-style: none; padding: 0; display: grid; gap: 12px; }
+.order { border: 2px dashed var(--line); border-radius: 16px; padding: 14px 16px; }
+.order.is-new { border-style: solid; border-color: var(--saffron-deep); }
+.order-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline; }
+.order-id { font-family: var(--display); font-size: 1.5rem; direction: ltr; }
+.order-time { color: var(--muted); font-size: .9rem; }
+.order-who { margin-top: 4px; font-weight: 700; }
+.order-who a { color: var(--burnt); }
+.order-lines { list-style: none; padding: 0; margin: 8px 0; border-top: 1px dashed var(--line); }
+.order-lines li { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-bottom: 1px dashed var(--line); }
+.order-note { color: var(--muted); font-size: .95rem; }
+.order-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 10px; }
+.order-total { font-weight: 800; font-size: 1.15rem; }
+.order select { min-height: 40px; padding: 0 10px; border-radius: 10px; border: 2px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-weight: 700; }
+
+.m-cat { margin-bottom: 22px; }
+.m-cat h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; margin-bottom: 6px; }
+.m-row { display: grid; grid-template-columns: 1fr 110px auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px dotted var(--line); }
+.m-row input[type="number"] { width: 100%; min-height: 40px; padding: 0 10px; border: 2px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink); font: inherit; }
+.m-row.changed input[type="number"] { border-color: var(--saffron-deep); }
+.m-row label { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; white-space: nowrap; }
+.m-row input[type="checkbox"] { width: 20px; height: 20px; }
